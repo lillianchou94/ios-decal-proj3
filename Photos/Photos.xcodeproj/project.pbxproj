@@ -15,6 +15,9 @@
 		3A1683A31BE9B717009F39C5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A21BE9B717009F39C5 /* Utils.swift */; };
 		3A1683A71BE9C593009F39C5 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A61BE9C593009F39C5 /* InstagramAPI.swift */; };
 		3A1683A91BE9C5A7009F39C5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1683A81BE9C5A7009F39C5 /* Photo.swift */; };
+		834241321CBDD0BC00EACEDD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834241311CBDD0BC00EACEDD /* WelcomeViewController.swift */; };
+		834241341CBDD43200EACEDD /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834241331CBDD43200EACEDD /* ImageViewController.swift */; };
+		834241361CBDDBD300EACEDD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834241351CBDDBD300EACEDD /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		3A1683A21BE9B717009F39C5 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3A1683A61BE9C593009F39C5 /* InstagramAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
 		3A1683A81BE9C5A7009F39C5 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		834241311CBDD0BC00EACEDD /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		834241331CBDD43200EACEDD /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		834241351CBDDBD300EACEDD /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				3A1683911BE9B642009F39C5 /* PhotosCollectionViewController.swift */,
+				834241351CBDDBD300EACEDD /* CollectionViewCell.swift */,
+				834241331CBDD43200EACEDD /* ImageViewController.swift */,
+				834241311CBDD0BC00EACEDD /* WelcomeViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -170,7 +179,10 @@
 			files = (
 				3A1683921BE9B642009F39C5 /* PhotosCollectionViewController.swift in Sources */,
 				3A1683901BE9B642009F39C5 /* AppDelegate.swift in Sources */,
+				834241361CBDDBD300EACEDD /* CollectionViewCell.swift in Sources */,
 				3A1683A31BE9B717009F39C5 /* Utils.swift in Sources */,
+				834241341CBDD43200EACEDD /* ImageViewController.swift in Sources */,
+				834241321CBDD0BC00EACEDD /* WelcomeViewController.swift in Sources */,
 				3A1683A71BE9C593009F39C5 /* InstagramAPI.swift in Sources */,
 				3A1683A91BE9C5A7009F39C5 /* Photo.swift in Sources */,
 			);

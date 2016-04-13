@@ -10,6 +10,8 @@ import Foundation
 
 class InstagramAPI {
     /* Connects with the Instagram API and pulls resources from the server. */
+    var photos : [Photo]!
+    var allPhotos = 0
     func loadPhotos(completion: (([Photo]) -> Void)!) {
         /* 
          * 1. Get the endpoint URL to the popular photos 
@@ -23,16 +25,32 @@ class InstagramAPI {
          *       d. Wait for completion of Photos array
          */
         // FILL ME IN
-        var url: NSURL
-
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url) {
-            (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+        let url: NSURL = Utils.getPopularURL()
+//        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+//        let session = NSURLSession(configuration: config)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url){
+            (data, response, error) in
             if error == nil {
                 //FIX ME
-                var photos: [Photo]!
+                var photos = [Photo]()
                 do {
-                    let feedDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                    let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                     // FILL ME IN, REMEMBER TO USE FORCED DOWNCASTING
+                    
+                    if let resultsArray = jsonData["data"] as? [[NSObject:AnyObject]] {
+
+                        // iterate over the array
+                        self.allPhotos = resultsArray.count
+                        for item in resultsArray {
+                            let photoData = Photo(data: item)
+                            photos.append(photoData)
+                        }
+                        // use main queue so that it's processed serially
+                        dispatch_async(dispatch_get_main_queue(), {
+                            self.photos = photos
+                        })
+                    }
                     
                     
                     // DO NOT CHANGE BELOW
